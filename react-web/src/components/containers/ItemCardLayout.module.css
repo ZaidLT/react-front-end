@@ -1,0 +1,134 @@
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: calc(var(--space-3xl) + var(--space-lg));
+  padding: var(--space-md);
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-bottom: var(--space-md);
+}
+
+.cardWithIndicator {
+  padding-left: calc(var(--space-md) + var(--space-sm) + var(--space-xs));
+}
+
+.colorIndicator {
+  position: absolute;
+  left: var(--space-md);
+  top: var(--space-md);
+  width: var(--space-xs);
+  height: calc(100% - (var(--space-md) * 2));
+  border-radius: var(--radius-sm);
+  background-color: var(--item-accent);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  flex: 1 0 0;
+  width: 100%;
+}
+
+.title {
+  align-self: stretch;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.description {
+  align-self: stretch;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--text-small);
+  font-weight: 400;
+  line-height: 1.2;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.descriptionPlaceholder {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: var(--space-sm);
+}
+
+.infoGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-size: var(--text-small);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.infoIcon {
+  width: calc(var(--space-sm) + var(--space-xs));
+  height: calc(var(--space-sm) + var(--space-xs));
+}
+
+.infoText {
+  color: inherit;
+}
+
+.priority {
+  color: var(--priority-color);
+}
+
+.priorityText {
+  color: inherit;
+}
+
+.toggle {
+  display: flex;
+  width: calc(var(--space-xl) + var(--space-sm));
+  height: calc(var(--space-md) + var(--space-xs));
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-blue-grey);
+  background-color: var(--color-blue-grey);
+  padding: var(--space-xs);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleActive {
+  justify-content: flex-end;
+  border-color: var(--color-success);
+  background-color: var(--color-success);
+}
+
+.toggleKnob {
+  width: var(--space-md);
+  height: var(--space-md);
+  background-color: var(--text-inverse);
+  border-radius: var(--radius-full);
+}

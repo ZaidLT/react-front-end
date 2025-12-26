@@ -1,63 +1,34 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { detectMobileApp, detectMobileAppWebView, setMobileTheme } from '../util/mobileTheme';
+import { useResponsive } from './useResponsive';
+import { setMobileTheme } from '../util/mobileTheme';
 
 /**
- * Custom hook for comprehensive mobile app detection
- * Provides both URL parameter and WebView detection with automatic theme setting
+ * Custom hook for responsive mobile app detection
+ * Uses viewport size to determine if the app should behave as mobile.
  */
 export const useMobileAppDetection = () => {
-  const searchParams = useSearchParams();
+  const { isMobile } = useResponsive();
   const [isMobileApp, setIsMobileApp] = useState(false);
-  const [detectionMethod, setDetectionMethod] = useState<'url' | 'webview' | 'none'>('none');
+  const [detectionMethod, setDetectionMethod] = useState<'viewport' | 'none'>('none');
 
   useEffect(() => {
-    // Primary detection: URL parameter
-    const mobileParam = searchParams.get('mobile') === 'true';
-    
-    // Backstop detection: Browser context
-    const webViewDetection = detectMobileAppWebView();
-    
-    // Determine final result and method
-    let finalResult = false;
-    let method: 'url' | 'webview' | 'none' = 'none';
-    
-    if (mobileParam) {
-      finalResult = true;
-      method = 'url';
-    } else if (webViewDetection) {
-      finalResult = true;
-      method = 'webview';
-    }
-    
-    setIsMobileApp(finalResult);
-    setDetectionMethod(method);
-    
-    // Automatically set mobile theme
-    setMobileTheme(finalResult);
-    
+    setIsMobileApp(isMobile);
+    setDetectionMethod('viewport');
+    setMobileTheme(isMobile);
+
     if (process.env.NEXT_PUBLIC_DEBUG_MODE === 'true') {
       console.log('🔍 useMobileAppDetection:', {
-        mobileParam,
-        webViewDetection,
-        finalResult,
-        method,
-        searchParamsString: searchParams.toString()
+        isMobile,
+        method: 'viewport',
       });
     }
-  }, [searchParams]);
+  }, [isMobile]);
 
   return {
     isMobileApp,
     detectionMethod,
-    // Helper functions for specific checks
-    isDetectedByUrl: detectionMethod === 'url',
-    isDetectedByWebView: detectionMethod === 'webview',
-    // Raw detection functions for manual checks
-    detectMobileApp: () => detectMobileApp(searchParams),
-    detectWebView: detectMobileAppWebView,
   };
 };
 
