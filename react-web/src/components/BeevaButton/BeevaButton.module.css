@@ -1,0 +1,33 @@
+/* Base button styles */
+.button {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  background-color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  pointer-events: auto;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,53 @@
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* Variants */
+.default {
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.elevated {
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+.elevated:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.outlined {
+    box-shadow: none;
+    border: 2px solid var(--color-primary);
+}
+
+/* Padding variants */
+.padding-sm {
+    padding: var(--space-sm);
+}
+
+.padding-md {
+    padding: var(--space-md);
+}
+
+.padding-lg {
+    padding: var(--space-lg);
+}
+
+/* Clickable cards */
+.card[role="button"] {
+    cursor: pointer;
+}
+
+.card[role="button"]:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.card[role="button"]:active {
+    transform: scale(0.98);
+}

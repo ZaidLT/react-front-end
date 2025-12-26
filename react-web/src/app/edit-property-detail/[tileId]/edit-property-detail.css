@@ -1,0 +1,138 @@
+/* Edit Property Detail Page Styles */
+
+.edit-property-detail-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.edit-property-detail-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  padding-bottom: 75px; /* extra bottom space so bottom button clears tab bar */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.edit-property-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.edit-property-detail-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-property-detail-back-button:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.edit-property-detail-title {
+  font-size: 18px;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: #3B82F6;
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+/* Form Styles */
+.edit-property-detail-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-property-detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-property-detail-label {
+  font-size: 14px;
+  font-family: 'Poppins-Medium', sans-serif;
+  color: #374151;
+  margin: 0;
+}
+
+.edit-property-detail-input,
+.edit-property-detail-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Poppins-Regular', sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-property-detail-input:focus,
+.edit-property-detail-textarea:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.edit-property-detail-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Save Button Section */
+.edit-property-detail-save-section {
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Loading State */
+.edit-property-detail-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .edit-property-detail-content {
+    padding: 15px;
+    padding-bottom: 75px;
+    max-width: 100%;
+  }
+
+  .edit-property-detail-header {
+    margin-bottom: 20px;
+  }
+
+  .edit-property-detail-form {
+    gap: 15px;
+  }
+
+  .edit-property-detail-save-section {
+    margin-top: 20px;
+  }
+}

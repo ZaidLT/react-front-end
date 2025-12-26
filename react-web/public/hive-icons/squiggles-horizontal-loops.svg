@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="64px" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" stroke="currentColor" stroke-width="4"/>
+    <path d="M38 12C38 6.47715 42.4772 2 48 2C53.5228 2 58 6.47715 58 12C58 17.5228 53.5228 22 48 22C42.4772 22 38 17.5228 38 12Z" stroke="currentColor" stroke-width="4"/>
+    <path d="M2 52C2 46.4772 6.47715 42 12 42C17.5228 42 22 46.4772 22 52C22 57.5228 17.5228 62 12 62C6.47715 62 2 57.5228 2 52Z" stroke="currentColor" stroke-width="4"/>
+    <path d="M38 52C38 46.4772 42.4772 42 48 42C53.5228 42 58 46.4772 58 52C58 57.5228 53.5228 62 48 62C42.4772 62 38 57.5228 38 52Z" stroke="currentColor" stroke-width="4"/>
+    <path d="M22 12H38" stroke="currentColor" stroke-width="4"/>
+    <path d="M22 52H38" stroke="currentColor" stroke-width="4"/>
+</svg>

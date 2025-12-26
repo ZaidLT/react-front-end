@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="64px" viewBox="0 0 50 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>beeva-clear</title>
+    <g id="beeva-clear" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Body -->
+        <path d="M25,10 C36.0457,10 45,18.9543 45,30 C45,41.0457 36.0457,50 25,50 C13.9543,50 5,41.0457 5,30 C5,18.9543 13.9543,10 25,10 Z" id="body" fill="currentColor"></path>
+        
+        <!-- Eyes -->
+        <circle id="eye-left" fill="white" cx="18" cy="25" r="5"></circle>
+        <circle id="eye-right" fill="white" cx="32" cy="25" r="5"></circle>
+        <circle id="pupil-left" fill="black" cx="18" cy="25" r="2"></circle>
+        <circle id="pupil-right" fill="black" cx="32" cy="25" r="2"></circle>
+        
+        <!-- Mouth -->
+        <path d="M18,35 C18,35 20,40 25,40 C30,40 32,35 32,35" id="smile" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+        
+        <!-- Antenna -->
+        <path d="M25,10 C25,10 25,5 25,2" id="antenna-stem" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <circle id="antenna-ball" fill="currentColor" cx="25" cy="2" r="2"></circle>
+        
+        <!-- Arms -->
+        <path d="M10,30 C10,30 0,25 0,20" id="arm-left" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M40,30 C40,30 50,25 50,20" id="arm-right" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        
+        <!-- Legs -->
+        <path d="M20,50 C20,50 15,60 15,62" id="leg-left" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M30,50 C30,50 35,60 35,62" id="leg-right" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </g>
+</svg>

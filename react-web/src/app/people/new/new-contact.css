@@ -1,0 +1,467 @@
+/* New Contact Page Styles */
+
+.new-contact-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Background gradient at the top */
+.new-contact-container::before {
+  content: '';
+  position: absolute;
+  top: -360px; /* Move up by 50px more */
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 495px; /* Much taller */
+  background-image: url('/pointed-gradient-background.svg');
+  background-size: cover; /* Maintain aspect ratio while covering the area */
+  background-position: top center; /* Center the background */
+  background-repeat: no-repeat;
+  transform: scaleY(-1) scaleX(-1);
+  z-index: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Avatar Section */
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hexagon-avatar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 120px;
+}
+
+/* White border hexagon (larger, behind) */
+.hexagon-avatar-container::before {
+  content: '';
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  background-color: white;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: 1;
+}
+
+.hexagon-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #F0F0F0; /* Colors.GRAY from React Native */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0F0F0; /* Colors.GRAY from React Native */
+}
+
+.edit-avatar-button {
+  position: absolute;
+  right: -10px;
+  bottom: 15px;
+  width: 32px;
+  height: 32px;
+  background-color: #3B82F6;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  z-index: 3;
+}
+
+.edit-avatar-button:hover {
+  background-color: #2563EB;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.save-button-container {
+  margin-top: 32px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Details Item Styling */
+.contact-details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-details-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.contact-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #374151;
+  background: transparent;
+}
+
+.contact-input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Date input styling to match other inputs */
+.contact-input[type="date"] {
+  color: #9CA3AF; /* Default placeholder color when empty */
+  color-scheme: light; /* Prevent dark mode styling */
+  position: relative;
+}
+
+/* When date input has a value, show normal text color */
+.contact-input[type="date"]:not(:placeholder-shown) {
+  color: #374151;
+}
+
+/* Alternative approach for browsers that don't support :placeholder-shown */
+.contact-input[type="date"]:focus {
+  color: #374151; /* Normal text color when focused */
+}
+
+/* Style the calendar picker icon */
+.contact-input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+  filter: invert(0.5); /* Make it match the placeholder color */
+}
+
+.contact-input[type="date"]:focus::-webkit-calendar-picker-indicator,
+.contact-input[type="date"]:not(:placeholder-shown)::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  filter: none; /* Normal color when focused or has value */
+}
+
+/* For Firefox */
+.contact-input[type="date"]::-moz-placeholder {
+  color: #9CA3AF;
+  opacity: 1;
+}
+
+/* Additional styling to ensure consistent appearance */
+.contact-input[type="date"]:invalid {
+  color: #9CA3AF;
+}
+
+.contact-input[type="date"]:valid {
+  color: #374151;
+}
+
+/* JavaScript-controlled classes for precise date input styling */
+.contact-input.empty-date {
+  color: #9CA3AF !important; /* Force placeholder color when empty */
+}
+
+.contact-input.has-value {
+  color: #374151 !important; /* Force normal text color when has value */
+}
+
+/* Contact type display styling to match placeholder color when empty */
+.contact-type-display .placeholder-text {
+  color: #9CA3AF;
+}
+
+.contact-type-display .selected-text {
+  color: #374151;
+}
+
+.contact-input.error {
+  border-color: #EF4444;
+}
+
+/* Horizontal Line Separator */
+.horizontal-line-container {
+  width: 100%;
+  opacity: 0.1;
+  align-self: center;
+  margin: 20px 0;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #6B7280;
+}
+
+/* Type and Relation Section */
+.type-and-relation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-type-display {
+  flex: 1;
+  padding: 0;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6B7280;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #374151;
+}
+
+.modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid #F3F4F6;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-item:hover {
+  background-color: #F9FAFB;
+}
+
+.modal-item:last-child {
+  border-bottom: none;
+}
+
+.form-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #374151;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input.error {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9CA3AF;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #374151;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea::placeholder {
+  color: #9CA3AF;
+}
+
+/* Select dropdown styling */
+.form-input[type="select"],
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Error state styling */
+.form-field .error-message {
+  color: #EF4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Loading state */
+.form-input:disabled {
+  background-color: #F9FAFB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .new-contact-container {
+    padding: 16px;
+  }
+  
+  .form-container {
+    padding: 16px 0;
+  }
+  
+  .form-section {
+    gap: 16px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Focus states for better accessibility */
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Animation for error states */
+.form-input.error {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}

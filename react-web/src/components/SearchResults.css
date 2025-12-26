@@ -1,0 +1,12 @@
+.search-result-item {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #F5F5F5;
+}

@@ -1,0 +1,69 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+}
+
+.label {
+    font-family: var(--font-family);
+    font-size: var(--text-body);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.required {
+    color: var(--color-error);
+    margin-left: 4px;
+}
+
+.input {
+    font-family: var(--font-family);
+    font-size: var(--text-body);
+    padding: var(--space-md);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 14, 80, 0.1);
+}
+
+.input:disabled {
+    background: rgba(0, 0, 0, 0.05);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.input.error {
+    border-color: var(--color-error);
+}
+
+.input.error:focus {
+    box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.errorMessage {
+    font-size: var(--text-small);
+    color: var(--color-error);
+    margin-top: calc(var(--space-xs) * -1);
+}
+
+/* Ensure minimum 16px font size on mobile to prevent zoom */
+@media (max-width: 767px) {
+    .input {
+        font-size: 16px !important;
+    }
+}

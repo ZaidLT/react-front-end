@@ -1,0 +1,222 @@
+/* Appliance Detail Page Styles */
+
+.appliance-detail-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.appliance-detail-background {
+  position: fixed;
+  top: 0;
+  margin-top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url('/backgrounds/home-background.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.appliance-detail-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.appliance-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 20px 0;
+}
+
+/* Right-side actions (three-dots options + edit pencil) */
+.appliance-detail-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.appliance-detail-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.appliance-detail-back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.appliance-detail-title {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #000E50;
+  text-align: center;
+  flex: 1;
+}
+
+/* Hex Container Styles */
+.appliance-detail-hex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.appliance-detail-header-hex {
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+/* Details Card Styles */
+.appliance-detail-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+}
+
+.appliance-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.appliance-image-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.appliance-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appliance-image-placeholder {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #cbd5e1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.appliance-image-placeholder:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.appliance-image-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.appliance-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appliance-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 20px 0 10px 0;
+}
+
+/* Files Section Styles */
+.appliance-detail-files-section {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .appliance-detail-content {
+    padding: 0 24px;
+  }
+
+  .appliance-detail-header {
+    margin-bottom: 20px;
+    padding: 20px 20px 0;
+  }
+
+  .appliance-detail-title {
+    font-size: 16px;
+  }
+
+  .appliance-detail-card {
+    padding: 20px;
+  }
+
+  .appliance-image-wrapper,
+  .appliance-image-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Loading and Error States */
+.appliance-detail-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.appliance-detail-error {
+  color: #dc2626;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin: 20px 0;
+}

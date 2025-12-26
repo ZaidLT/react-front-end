@@ -1,0 +1,222 @@
+/* 
+  EEVA DESIGN SYSTEM 
+  Source of Truth for all UI styles.
+  Derived from Mobile Figma Patterns & Adapted for Web.
+*/
+
+:root {
+  /* ------------------------- */
+  /* 🎨 COLORS (Brand Identity) */
+  /* ------------------------- */
+  /* Extracted from existing Colors.ts to match mobile Figma designs */
+
+  /* Primary Brand Colors */
+  --color-primary: #000E50;
+  /* BLUE - Deep Navy - Main Brand Color */
+  --color-primary-light: #333E73;
+  /* PRIMARY_DARK_BLUE - Lighter Navy */
+  --color-primary-electric: #2A46BE;
+  /* PRIMARY_ELECTRIC_BLUE - Bright Blue */
+  --color-accent: #2B4EF1;
+  /* ROYAL_BLUE - Accent Color */
+
+  /* Backgrounds */
+  --bg-app: #FAFAFA;
+  /* LIGHT_GREY_BACKGROUND - App Background */
+  --bg-card: #FFFFFF;
+  /* WHITE - Card Background */
+  --bg-sidebar: #FFFFFF;
+  /* WHITE - Desktop Sidebar */
+  --bg-secondary: #F8F8F8;
+  /* LIGHT_GREY - Secondary Background */
+
+  /* Text */
+  --text-primary: #000E50;
+  /* BLUE - Headings */
+  --text-secondary: #666E96;
+  /* GREY_COLOR - Body text */
+  --text-tertiary: #999FB9;
+  /* PRIMARY_DARKER_BLUE - Subtle text */
+  --text-inverse: #FFFFFF;
+  /* WHITE - Text on dark backgrounds */
+
+  /* Status Colors */
+  --color-success: #6CC47C;
+  /* PISTACHIO_GREEN */
+  --color-warning: #FFA020;
+  /* MUSTARD */
+  --color-error: #D70015;
+  /* RED */
+  --color-info: #798EF8;
+  /* CORNFLOWER_BLUE */
+
+  /* Semantic Colors */
+  --color-blue-grey: #CAD5E0;
+  /* BLUE_GREY */
+  --color-lavender: #95A3DF;
+  /* LAVENDER */
+  --color-aqua: #6FF9D8;
+  /* AQUA */
+  --color-purple: #8980B3;
+  /* PURPLE */
+  --color-cosmic: #BABACA;
+  /* COSMIC */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  /* Standard Mobile Padding */
+  --space-lg: 24px;
+  --space-xl: 32px;
+  /* Standard Desktop Padding */
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* ------------------------- */
+  /* 📱 BREAKPOINTS            */
+  /* ------------------------- */
+  --mobile-max: 767px;
+  --tablet-min: 768px;
+  --desktop-min: 1024px;
+  --wide-min: 1440px;
+
+  /* ------------------------- */
+  /* 🧱 LAYOUT                 */
+  /* ------------------------- */
+  --max-width-desktop: 1200px;
+  --sidebar-width: 280px;
+  --header-height-mobile: 60px;
+  --header-height-desktop: 80px;
+  --tabbar-height: 80px;
+
+  /* ------------------------- */
+  /* 🔤 TYPOGRAPHY             */
+  /* ------------------------- */
+  --font-family: 'Poppins', sans-serif;
+
+  /* Fluid Typography: Scales automatically between mobile and desktop */
+  --text-h1: clamp(24px, 4vw, 32px);
+  --text-h2: clamp(20px, 3vw, 24px);
+  --text-h3: clamp(18px, 2vw, 20px);
+  --text-body: clamp(14px, 1vw, 16px);
+  --text-small: 12px;
+
+  /* ------------------------- */
+  /* ✨ EFFECTS                */
+  /* ------------------------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  /* Standard Card Radius */
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------------- */
+/* 🛠️ UTILITY CLASSES        */
+/* ------------------------- */
+
+/* Containers */
+.eeva-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .eeva-container {
+    padding: 0 var(--space-xl);
+    max-width: var(--max-width-desktop);
+  }
+}
+
+/* Cards */
+.eeva-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Grids */
+.eeva-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .eeva-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.eeva-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .eeva-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .eeva-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Typography Utilities */
+.text-h1 {
+  font-size: var(--text-h1);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.text-h2 {
+  font-size: var(--text-h2);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.text-body {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Flex Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}

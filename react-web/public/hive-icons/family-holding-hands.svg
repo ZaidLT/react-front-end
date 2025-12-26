@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="48px" viewBox="0 0 55 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>family-holding-hands</title>
+    <g id="family-holding-hands" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Adult 1 -->
+        <circle id="head1" fill="currentColor" cx="14" cy="8" r="6"></circle>
+        <path d="M14,16 L14,32" id="body1" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M14,20 L8,28" id="arm1" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M14,20 L20,28" id="arm2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M14,32 L10,42" id="leg1" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M14,32 L18,42" id="leg2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        
+        <!-- Adult 2 -->
+        <circle id="head2" fill="currentColor" cx="41" cy="8" r="6"></circle>
+        <path d="M41,16 L41,32" id="body2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M41,20 L35,28" id="arm3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M41,20 L47,28" id="arm4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M41,32 L37,42" id="leg3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M41,32 L45,42" id="leg4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        
+        <!-- Child -->
+        <circle id="head3" fill="currentColor" cx="27.5" cy="14" r="4"></circle>
+        <path d="M27.5,19 L27.5,30" id="body3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M27.5,22 L22,28" id="arm5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M27.5,22 L33,28" id="arm6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M27.5,30 L24.5,38" id="leg5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M27.5,30 L30.5,38" id="leg6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        
+        <!-- Holding hands -->
+        <path d="M20,28 C20,28 22,30 27.5,30" id="hand1" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M35,28 C35,28 33,30 27.5,30" id="hand2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </g>
+</svg>

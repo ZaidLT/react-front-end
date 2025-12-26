@@ -1,0 +1,10 @@
+/* Button-specific styles */
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  transform: none;
+}

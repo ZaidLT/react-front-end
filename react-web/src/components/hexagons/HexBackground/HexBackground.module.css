@@ -1,0 +1,11 @@
+.background {
+  width: var(--hex-width);
+  height: var(--hex-height);
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: fill;
+  z-index: 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 14, 80, 0.12));
+  pointer-events: none;
+}

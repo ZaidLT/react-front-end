@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Back Arrow</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="back-arrow" fill="currentColor">
+            <path d="M20,11 L7.83,11 L13.42,5.41 C13.8126582,5.01734135 13.8126582,4.38265865 13.42,4 C13.0273418,3.61734135 12.3926582,3.61734135 12,4 L4,12 L12,20 C12.3926582,20.3826587 13.0273418,20.3826587 13.42,20 C13.8126582,19.6173413 13.8126582,18.9826587 13.42,18.59 L7.83,13 L20,13 C20.5522847,13 21,12.5522847 21,12 C21,11.4477153 20.5522847,11 20,11 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

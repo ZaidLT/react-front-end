@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  justify-items: center;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--hex-gap);
+  position: relative;
+  grid-template-rows: calc(var(--hex-height) - var(--hex-overlap));
+}

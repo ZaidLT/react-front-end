@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="64px" viewBox="0 0 70 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="5" y="10" width="60" height="50" rx="4" stroke="currentColor" stroke-width="4"/>
+    <line x1="5" y1="22" x2="65" y2="22" stroke="currentColor" stroke-width="4"/>
+    <line x1="20" y1="4" x2="20" y2="16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    <line x1="50" y1="4" x2="50" y2="16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Calendar grid -->
+    <line x1="20" y1="32" x2="20" y2="52" stroke="currentColor" stroke-width="2"/>
+    <line x1="35" y1="32" x2="35" y2="52" stroke="currentColor" stroke-width="2"/>
+    <line x1="50" y1="32" x2="50" y2="52" stroke="currentColor" stroke-width="2"/>
+    
+    <line x1="15" y1="32" x2="55" y2="32" stroke="currentColor" stroke-width="2"/>
+    <line x1="15" y1="42" x2="55" y2="42" stroke="currentColor" stroke-width="2"/>
+    <line x1="15" y1="52" x2="55" y2="52" stroke="currentColor" stroke-width="2"/>
+    
+    <!-- Highlight a date -->
+    <rect x="36" y="43" width="13" height="8" rx="2" fill="currentColor"/>
+</svg>

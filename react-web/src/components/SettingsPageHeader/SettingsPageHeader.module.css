@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  margin-top: 24px;
+}
+
+.backButtonContainer {
+  display: flex;
+  width: 64px;
+  height: 24px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.backButton {
+  cursor: pointer;
+}
+
+.titleContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #000E50;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.spacer {
+  width: 64px;
+}

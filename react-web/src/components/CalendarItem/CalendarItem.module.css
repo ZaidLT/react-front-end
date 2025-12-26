@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #F0F0F0; /* Colors.LIGHT_GREY */
+  gap: 15px;
+}
+
+.visibilityToggle {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectionToggle {
+  cursor: pointer;
+}
+
+.selectionCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectionDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFFFFF; /* Colors.WHITE */
+}
+
+.calendarText {
+  flex: 1;
+  font-family: 'Poppins-Medium', 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #000E50; /* Colors.MIDNIGHT */
+}

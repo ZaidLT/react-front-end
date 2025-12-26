@@ -1,0 +1,43 @@
+.innerWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.innerWrapperNoPadding {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.fabAbsolute {
+  position: absolute !important;
+}
+
+/* Beeva button positioning (styling is in BeevaButton component) */
+.beevaIconPosition {
+  --beeva-icon-min-right-padding: 32px;
+  --beeva-icon-calculated-right-padding: max(var(--beeva-icon-min-right-padding), calc((100vw - 760px) / 2));
+  position: absolute;
+  right: var(--beeva-icon-calculated-right-padding);
+  bottom: 100px;
+  z-index: 1;
+}
+
+/* Mobile app variant */
+.beevaIconMobileApp {
+  --beeva-icon-mobile-app-offset: 8px;
+  bottom: 32px;
+  right: calc(var(--beeva-icon-calculated-right-padding) - var(--beeva-icon-mobile-app-offset));
+}
+
+/* Responsive right positioning adjustments */
+@media (max-width: 480px) {
+  .beevaIconPosition {
+    --beeva-icon-min-right-padding: 28px;
+  }
+}

@@ -1,0 +1,47 @@
+/* Shared utility classes for hexagon components */
+
+/* Base hex container - provides size, position, flex */
+.hex-base {
+  width: var(--hex-width);
+  height: var(--hex-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Reset for buttons/links */
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Content wrapper - centers children */
+.hex-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover animations */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Cursor variants */
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

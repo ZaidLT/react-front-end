@@ -1,0 +1,238 @@
+/* Create Note page styles */
+
+.create-note-wrapper {
+  min-height: 100vh;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+}
+
+.create-note-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.create-note-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  overflow-y: auto;
+}
+
+.create-note-title-section {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.create-note-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.create-note-title-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--primary-dark-blue-100, #000E50);
+  background: transparent;
+  padding: 8px 0;
+  line-height: 21px;
+  letter-spacing: -0.408px;
+}
+
+.create-note-title-input::placeholder {
+  color: var(--primary-dark-blue-40, #999FB9);
+  font-weight: 400;
+}
+
+.create-note-toggle-container {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.create-note-toggle-btn {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.create-note-toggle-btn.active {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.create-note-content-section {
+  padding: 8px 0 0 0;
+  margin: 0;
+  overflow-y: auto;
+  min-height: 280px;
+}
+
+.create-note-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: var(--primary-dark-blue-100, #000E50);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  letter-spacing: 0.16px;
+}
+
+.create-note-textarea::placeholder {
+  color: var(--primary-dark-blue-40, #999FB9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.408px;
+}
+
+.create-note-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.create-note-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.create-note-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.create-note-checklist-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #374151;
+  background: transparent;
+  padding: 4px 0;
+}
+
+.create-note-checklist-input::placeholder {
+  color: #9CA3AF;
+}
+
+.create-note-remove-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.create-note-remove-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.create-note-add-item-btn {
+  background: none;
+  border: 1px dashed #d1d5db;
+  color: #6b7280;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.create-note-add-item-btn:hover {
+  border-color: #9ca3af;
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+/* Custom checkbox styling to match home page */
+.create-note-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/checkbox/icon-unchecked.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.create-note-checkbox:checked {
+  background-image: url('/icons/checkbox/icon-checked.svg');
+}
+
+.create-note-checkbox:focus {
+  outline: none;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .create-note-title-section {
+    padding: 0;
+  }
+
+  .create-note-content-section {
+    padding: 8px 0 0 0;
+    margin: 0;
+  }
+
+  .create-note-title-input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-note-toggle-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .create-note-textarea {
+    font-size: 16px; /* Keep at 16px to prevent iOS zoom */
+  }
+
+  .create-note-checklist-input {
+    font-size: 16px; /* Keep at 16px to prevent iOS zoom */
+  }
+}

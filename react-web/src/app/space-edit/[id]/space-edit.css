@@ -1,0 +1,75 @@
+/* Space Edit Page Header & Content Adjustments */
+/* Container */
+.space-edit-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Background */
+.space-edit-background {
+  position: fixed;
+  top: 0;
+  margin-top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url('/backgrounds/home-background.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+.space-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 20px 0;
+}
+
+.space-edit-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.space-edit-back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.space-edit-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 24px;
+  padding-bottom: 75px; /* ensure bottom button clears mobile tab bar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* ensure above fixed background */
+  z-index: 5;
+}
+
+/* Save Button Section */
+.space-edit-save-section {
+  margin-top: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 10; /* ensure visible above background */
+}
+

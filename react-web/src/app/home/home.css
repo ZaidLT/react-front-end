@@ -1,0 +1,52 @@
+/* Home page specific styles */
+
+/* Full-page background */
+.home-page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url('/pointed-gradient-background.svg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Home page container */
+.home-page-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Content area */
+.home-page-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Horizontal scroll container */
+.horizontal-scroll-container {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-scrollbar-width: none;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .home-page-content {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,48 @@
+.profile-select-container {
+  margin-bottom: 24px;
+}
+
+.profile-select-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.profile-select-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.profile-select-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  max-height: 100px;
+}
+
+.profile-select-input-wrapper {
+  width: 100%;
+}
+
+.profile-select-input {
+  flex: 1;
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  padding: 8px 12px;
+  transition: border-color 0.2s ease;
+}
+
+.profile-select-input:enabled {
+  cursor: pointer;
+}
+
+.profile-select-input:disabled {
+  cursor: not-allowed;
+}

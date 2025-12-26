@@ -1,0 +1,95 @@
+/* Space Detail Page Styles */
+
+.space-detail-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.space-detail-background {
+  position: fixed;
+  top: 0;
+  margin-top: 130px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url('/backgrounds/home-background.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.space-detail-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.space-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 20px 0;
+}
+
+.space-detail-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.space-detail-back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hex Container Styles */
+.space-detail-hex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.space-detail-header-hex {
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+/* Divider */
+.space-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 20px 0 10px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .space-detail-content {
+    padding: 0 24px;
+  }
+}
+

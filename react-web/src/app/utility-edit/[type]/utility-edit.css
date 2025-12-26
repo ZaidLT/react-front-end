@@ -1,0 +1,46 @@
+/* Utility Edit Page Header & Content Adjustments */
+
+.utility-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 20px 0;
+}
+
+.utility-edit-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.utility-edit-back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.utility-edit-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 24px;
+  padding-bottom: 75px; /* ensure bottom button clears mobile tab bar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5; /* keep content above any background elements */
+}
+
+/* Save Button Section */
+.utility-edit-save-section {
+  margin-top: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+

@@ -1,0 +1,41 @@
+/* Time page styles */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.time-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .time-container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+}
+
+/* Additional responsive breakpoints */
+@media (max-width: 480px) {
+  .time-container {
+    padding: 0 12px;
+  }
+}
+
+/* Ensure container is always responsive */
+@media (min-width: 769px) {
+  .time-container {
+    padding: 0 20px;
+  }
+}

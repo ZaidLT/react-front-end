@@ -1,0 +1,457 @@
+/* People page styles */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.people-container {
+  position: relative;
+  /* Account for tab bar on desktop (80px) but not on mobile */
+  height: calc(100vh - 80px); /* Fixed height to contain the scrollable list */
+  max-height: calc(100vh - 80px); /* Ensure it doesn't exceed viewport */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 24px;
+  overflow: hidden; /* Prevent any scroll on the container itself */
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin: 16px 0;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 16px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+}
+
+.contact-list-wrapper {
+  flex: 1; /* Take remaining space after header/search */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Allow flex child to shrink */
+  overflow: hidden; /* Prevent wrapper from scrolling */
+}
+
+.contact-list-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1; /* Take full height of wrapper */
+  width: 100%;
+  position: relative;
+  min-height: 0; /* Allow flex child to shrink */
+  overflow: hidden; /* Container doesn't scroll, only the list inside */
+}
+
+.contacts-list {
+  flex: 1;
+  width: 100%;
+  height: 100%; /* Take full height of the container */
+  min-height: 300px; /* Ensure minimum height for scrolling */
+  overflow-y: auto !important; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding-right: 24px;
+  padding-bottom: 20px; /* Add bottom padding so last item is visible */
+  box-sizing: border-box; /* Include padding in width calculation */
+  /* Ensure scrolling works on all devices */
+  -webkit-overflow-scrolling: touch;
+}
+
+.contacts-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contacts-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.alphabet-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%; /* Match the contact list height */
+  width: 24px;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  gap: 11px;
+}
+
+.alphabet-letter {
+  color: var(--primary-electric-40, #AAB5E5);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.408px;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.alphabet-letter:hover {
+  color: #3B82F6;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  gap: 16px;
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #E5E7EB;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent row content from overflowing */
+}
+
+.contact-row:hover {
+  background-color: #F9FAFB;
+}
+
+.contact-row.selected {
+  background-color: #EBF8FF;
+  border-left: 4px solid #3B82F6;
+  padding-left: 8px;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.contact-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-avatar-initials {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden; /* Prevent text overflow */
+}
+
+/* Ensure text in contact info doesn't cause horizontal overflow */
+.contact-info * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%; /* Ensure text doesn't exceed container width */
+}
+
+.contact-selection-indicator {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #3B82F6;
+  margin-left: 8px;
+}
+
+/* Communication Icons */
+.communication-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 8px;
+}
+
+.communication-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.communication-icon-button:hover {
+  opacity: 1;
+  background-color: #F3F4F6;
+  transform: scale(1.1);
+}
+
+.communication-icon-button:active {
+  transform: scale(0.95);
+  background-color: #E5E7EB;
+}
+
+.communication-icon-button img {
+  transition: opacity 0.2s ease;
+}
+
+/* Mobile specific styles for communication icons */
+@media (max-width: 768px) {
+  .communication-icons {
+    gap: 8px;
+    padding-right: 4px;
+  }
+
+  .communication-icon-button {
+    padding: 6px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .communication-icon-button:hover {
+    background-color: #F3F4F6;
+  }
+}
+
+/* Filter Pills Container */
+.filter-pills-container {
+  width: 100vw;
+  margin: 16px 0;
+  padding: 0 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Hide scrollbar for filter pills */
+.filter-pills-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Edit Mode Controls */
+.edit-controls {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.edit-control-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #3B82F6;
+  padding: 4px 8px;
+}
+
+.edit-control-button:hover {
+  text-decoration: underline;
+}
+
+/* People with Alphabet Slider Container */
+.people-alphabet-slider-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  position: relative;
+  min-height: 0; /* Allow flex child to shrink */
+}
+
+/* Alphabet Slider Improvements */
+.alphabet-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 24px;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  gap: 11px;
+}
+
+.alphabet-letter {
+  color: var(--primary-electric-40, #AAB5E5);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.408px;
+  cursor: pointer;
+  padding: 2px;
+  transition: all 0.2s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.alphabet-letter:hover {
+  color: #3B82F6;
+  background-color: #EBF8FF;
+  transform: scale(1.1);
+}
+
+.alphabet-letter.active {
+  color: #3B82F6;
+  background-color: #3B82F6;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .people-container {
+    padding: 0 24px;
+    max-width: 100%;
+    /* Full viewport height on mobile (no tab bar on mobile) */
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden; /* Prevent page scroll on mobile */
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .contacts-list {
+    padding-right: 16px;
+    /* Full height with proper scrolling */
+    height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .alphabet-slider {
+    width: 20px;
+    height: 100%;
+  }
+}
+
+/* Additional responsive breakpoints */
+@media (max-width: 480px) {
+  .people-container {
+    padding: 0 24px;
+    /* Full viewport height on small screens (no tab bar) */
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden; /* Prevent page scroll */
+  }
+
+  .search-container {
+    margin: 12px 0;
+  }
+
+  .contacts-list {
+    padding-right: 12px;
+    height: 100% !important; /* Full height with scrolling */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .alphabet-slider {
+    height: 100%;
+  }
+}
+
+/* Ensure container is always responsive */
+@media (min-width: 769px) {
+  .people-container {
+    padding: 0 24px;
+  }
+}
+
+/* Mobile app specific styles - when running in mobile app webview */
+:root.mobile .people-container {
+  /* Full viewport height in mobile app (no tab bar) */
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: hidden;
+}
+
+:root.mobile .contacts-list {
+  /* Full height with proper scrolling in mobile app */
+  height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+:root.mobile .alphabet-slider {
+  /* Match the contact list height in mobile app */
+  height: 100%;
+}

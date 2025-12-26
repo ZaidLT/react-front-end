@@ -1,0 +1,23 @@
+.background {
+  width: 100vw;
+  background-image: url(/backgrounds/home-background.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 120px;
+}
